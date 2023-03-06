@@ -121,6 +121,66 @@ $gradient--color: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
 	margin-left: auto;
 }
 
+.form-container {
+	padding: 0 4rem 0 8rem;
+}
+
+.form-container>form {
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	row-gap: 1.625rem;
+}
+
+.form-container label {
+	font-size: .75rem;
+	letter-spacing: 2px;
+	color: $primary--color;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.form-container input[type="text"] {
+	font-size: 1.125rem;
+	color: rgba($primary--color,.25);
+	width: 100%;
+	padding: 8px;
+	border: 1px solid $third--color;
+	border-radius: 8px;
+}
+
+.form-container form>div {
+	display: flex;
+}
+
+.form-container form>div p {
+	flex: 1;
+}
+
+.form-container form>div p:nth-child(1) span {
+	display: flex;
+}
+
+.form-container form>div p:nth-child(1) span input[type="text"]:nth-child(1) {
+	margin-right: 10px;
+}
+
+.form-container form>div p:nth-child(1) span input[type="text"]:nth-child(2) {
+	margin-right: 20px;
+}
+
+.form-container input[type="button"] {
+	font-size: 1.125rem;
+	color: $color-infos-card-recto;
+	background-color: $primary--color;
+	padding-block: 1rem;
+	text-align: center;
+	border-radius: 8px;
+	border: none;
+}
+
+
+
 .completed-container {
 	display: none;
 }
