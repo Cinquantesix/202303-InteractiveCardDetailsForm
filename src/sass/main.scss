@@ -142,11 +142,16 @@ $gradient--color: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
 
 .form-container input[type="text"] {
 	font-size: 1.125rem;
-	color: rgba($primary--color,.25);
+	color: $primary--color;
 	width: 100%;
-	padding: 8px;
+	padding: 8px 1rem;
 	border: 1px solid $third--color;
 	border-radius: 8px;
+	transition: all .3s ease;
+}
+
+.form-container input[type="text"]::placeholder {
+	color: rgba($primary--color,.25);
 }
 
 .form-container form>div {
@@ -169,7 +174,7 @@ $gradient--color: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
 	margin-right: 20px;
 }
 
-.form-container input[type="button"] {
+.form-container input[type="submit"] {
 	font-size: 1.125rem;
 	color: $color-infos-card-recto;
 	background-color: $primary--color;
@@ -179,7 +184,23 @@ $gradient--color: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
 	border: none;
 }
 
+.form-container input[type="text"]:invalid {
+	border: 1px solid $contrast--color;
+}
 
+
+.form-container input:has(:placeholder-shown) {
+	border: 1 px solid $third--color;
+}
+
+.form-container input[type="text"]:focus {
+	background: linear-gradient(#fff, #fff) padding-box,
+				linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%) border-box;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	outline: none;
+	transition: all .3s ease;
+}
 
 .completed-container {
 	display: none;

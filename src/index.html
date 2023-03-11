@@ -34,22 +34,22 @@
           </p>
           <p>
             <label class="input-label" for="number"> Card Number</label>
-            <input id="number" type="text" placeholder=" e.g. 1234 5678 9123 0000">
+            <input id="number" type="text" required pattern="[0-9]{16}" placeholder=" e.g. 1234 5678 9123 0000">
           </p>
           <div>
             <p>
               <label class="input-label" for="date">Exp. Date (MM/YY)</label>
               <span id="date">
-                <input type="text" placeholder="MM">
-                <input type="text" placeholder="YY">
+                <input type="text" required pattern="[0-1][0-9]" placeholder="MM">
+                <input type="text" required pattern="(2[3-9]|[3-9][0-9])" placeholder="YY">
               </span>
             </p>
             <p>
               <label class="input-label" for="cvc">CVC</label>
-              <input id="cvc" type="text" placeholder="e.g. 123">
+              <input id="cvc" type="text" required pattern="[0-9]{3}" placeholder="e.g. 123">
             </p>
           </div>
-          <input type="button" value="Confirm">
+          <input type="submit" value="Confirm">
         </form>
       </div>
       <img src="images/bg-main-desktop.png" alt="background color blur">
